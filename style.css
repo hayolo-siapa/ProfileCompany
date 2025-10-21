@@ -488,19 +488,19 @@
   flex-wrap: wrap;
 }
 
-.about-image {
+.about-video {
   flex: 1;
   min-width: 300px;
 }
 
-.about-image video {
+.about-video video {
   width: 100%;
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
-.about-image img:hover {
+.about-video video:hover {
   transform: scale(1.02);
 }
 
@@ -721,3 +721,4 @@ button {
     display: block;
   }
 }
+
