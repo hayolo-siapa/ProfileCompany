@@ -150,7 +150,7 @@
 <!-- Popup Modal -->
 <div id="popup" class="popup">
   <div class="popup-content" onclick="event.stopPropagation()">
-    <span class="close" onclick="closePopup()">x</span>
+    <span class="close" onclick="closePopup()">&times;</span>
     <h3 id="popup-title"></h3>
     <p>Ingin memesan? Bisa melalui link di bawah ini.</p>
     <a href="https://wa.me/6281804230727?text=Halo,%20Saya%20ingin%20memesan%20cctv!" target="_blank" class="btn-gradient">Pesan via WhatsApp</a>
@@ -168,7 +168,7 @@
 <section id="about" class="about">
   <div class="container about-wrapper">
     <div class="about-video">
-      <video autoplay loop>
+      <video autoplay loop playsline>
         <source src="asset/lonely.mp4" type="video/mp4">
         Browser anda tidak mendukung video tag.
       </video>
@@ -271,5 +271,6 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
