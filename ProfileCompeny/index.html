@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asrial Company - Jasa Instalasi CCTV Profesional</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="nav-logo">
+        <div class="logo-icon">
+          <svg class="logo-svg" fill="currentColor" viewBox="0 0 24 24">
+            <img src="asset/letter-a.png" width="50vh" height="50vh" alt="">
+          </svg>
+        </div>
+        <span class="logo-text">Asrial Company</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#home" class="link">Beranda</a>
+        <a href="#services" class="link">Layanan</a>
+        <a href="#about" class="link">Tentang</a>
+        <a href="#contact" class="btn-nav">Kontak</a>
+      </div>
+
+      <button id="mobile-menu-btn" class="menu-btn">
+        <svg viewBox="0 0 24 24" class="menu-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="mobile-menu hidden">
+      <a href="#home" class="mobile-link">Beranda</a>
+      <a href="#services" class="mobile-link">Layanan</a>
+      <a href="#about" class="mobile-link">Tentang</a>
+      <a href="#contact" class="mobile-link">Kontak</a>
+    </div>
+  </nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="asset/background.mp4" type="video/mp4">
+    Browser Anda tidak mendukung video background.
+  </video>
+
+  <!-- Overlay biru semi transparan -->
+  <div class="overlay"></div>
+
+  <!-- Konten teks -->
+  <div class="hero-content">
+    <h1 class="hero-title">Solusi CCTV Terpercaya</h1>
+    <p class="hero-desc">
+      Asrial Company menyediakan jasa instalasi CCTV profesional 
+      untuk keamanan rumah dan bisnis Anda.
+    </p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Konsultasi Gratis</a>
+      <a href="#services" class="btn-outline">Lihat Layanan</a>
+    </div>
+  </div>
+</section>
+
+  <!-- SERVICES -->
+<section id="services" class="services">
+  <div class="container">
+    <h2 class="section-title">Layanan Kami</h2>
+    <p class="section-subtitle">
+      Kami menyediakan berbagai layanan instalasi dan perawatan CCTV yang 
+      dirancang untuk memenuhi kebutuhan keamanan Anda.
+    </p>
+
+    <div class="service-grid">
+      <div class="service-card" onclick="window.location.href='#daftar'">
+        <div class="service-icon">
+          <img src="asset/camera.png" alt="Instalasi CCTV">
+        </div>
+        <a href="paket.html"></a>
+        <h3 class="service-title">Instalasi CCTV</h3>
+        <p class="service-desc">
+          Pemasangan CCTV dengan konfigurasi profesional dan kabel rapi untuk rumah, toko, maupun kantor.
+        </p>
+      </div>
+
+      <div class="service-card" onclick="showPopup('Maintenance')">
+        <div class="service-icon">
+          <img src="asset/maintenance.png" alt="Maintenance">
+        </div>
+        <h3 class="service-title">Perawatan & Maintenance</h3>
+        <p class="service-desc">
+          Layanan perawatan berkala untuk menjaga kualitas gambar dan daya tahan perangkat CCTV Anda.
+        </p>
+      </div>
+
+      <div class="service-card" onclick="showPopup('Upgrade')">
+        <div class="service-icon">
+          <img src="asset/forward.png" alt="Upgrade Sistem">
+        </div>
+        <h3 class="service-title">Upgrade Sistem</h3>
+        <p class="service-desc">
+          Tingkatkan sistem CCTV Anda ke resolusi yang lebih tinggi dan fitur modern seperti akses jarak jauh.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="daftar" class="menu-section">
+  <h2>Daftar Paket CCTV</h2>
+  <div class="underline"></div>
+
+  <div class="menu-container">
+    <div class="menu-card" onclick="showPopup('Smart Camera')">
+      <img src="asset/smart.png" alt="Smart Camera" class="zoomable">
+      <div class="menu-info">
+        <h3>Smart Camera</h3>
+        <p>Kamera pintar dengan koneksi Wi-Fi dan deteksi gerak otomatis.</p>
+      </div>
+    </div>
+
+    <div class="menu-card" onclick="showPopup('Analog Camera')">
+      <img src="asset/analog.png" alt="Analog Camera" class="zoomable">
+      <div class="menu-info">
+        <h3>Analog Camera</h3>
+        <p>Kamera klasik dengan kabel coaxial dan kualitas stabil.</p>
+      </div>
+    </div>
+
+    <div class="menu-card" onclick="showPopup('IP Camera')">
+      <img src="asset/ip.png" alt="IP Camera" class="zoomable">
+      <div class="menu-info">
+        <h3>IP Camera</h3>
+        <p>Kamera digital dengan transmisi data melalui jaringan internet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popup Modal -->
+<div id="popup" class="popup">
+  <div class="popup-content" onclick="event.stopPropagation()">
+    <span class="close" onclick="closePopup()">x</span>
+    <h3 id="popup-title"></h3>
+    <p>Ingin memesan? Bisa melalui link di bawah ini.</p>
+    <a href="https://wa.me/6281804230727?text=Halo,%20Saya%20ingin%20memesan%20cctv!" target="_blank" class="btn-gradient">Pesan via WhatsApp</a>
+  </div>
+</div>
+
+<!-- Modal background dan zoom -->
+<div id="zoomModal" class="zoom-modal">
+  <span class="close">&times;</span>
+  <img class="zoomed-image" id="zoomImg">
+</div>
+
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="container about-wrapper">
+    <div class="about-image">
+        <video src="asset/lonely.mp4" autoplay loop></video>
+    </div>
+
+    <div class="about-content">
+      <h2 class="section-title">Tentang Kami</h2>
+      <p class="about-text">
+        <strong>Asrial Company</strong> adalah perusahaan yang berfokus pada jasa instalasi dan perawatan sistem keamanan CCTV.
+        Kami memiliki tim teknisi profesional dengan pengalaman lebih dari 3 tahun di bidang sistem keamanan.
+      </p>
+
+      <p class="about-text">
+        Kami berkomitmen untuk memberikan layanan terbaik dengan hasil instalasi yang rapi, tahan lama, 
+        dan sesuai kebutuhan setiap pelanggan. Kepuasan dan keamanan Anda adalah prioritas utama kami.
+      </p>
+
+      <a href="#contact" class="btn-dec">Hubungi Kami</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 class="section-title">Hubungi Kami</h2>
+    <p class="subtitle">
+      Kami siap membantu Anda. Silakan isi formulir di bawah ini atau hubungi kami melalui informasi kontak.
+    </p>
+
+    <div class="contact-wrapper">
+      <!-- Contact Form -->
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/mjkadjoo" method="POST">
+        <div class="form-group">
+          <label for="name">Nama Lengkap</label>
+          <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Alamat Email</label>
+          <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-dec">Kirim Pesan</button>
+        <div id="form-message" class="form-message hidden"></div>
+      </form>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Informasi Kontak</h3>
+        <p><strong>Alamat:</strong> Jl. Srabi Lor Rt.05 Rw.04 Getassrabi, Gebog, Kudus</p>
+        <p><strong>Telepon:</strong> <a href="https://wa.me/6281804230727?text=Halo,%20saya%20ingin%20bertanya">+62 818 0423 0727</a>
+        <p><strong>Email:</strong> asrialk404@gmail.com</p>
+        <p><strong>Jam Operasional:</strong> Senin - Sabtu, 08.00 - 17.00 WIB</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-brand">
+      <h3>Asrial Company</h3>
+      <p>Solusi Teknologi Terpercaya untuk Bisnis Anda.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Navigasi</h4>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#services">Layanan</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-socials">
+      <h4>Ikuti Kami</h4>
+      <div class="social-icons">
+        <a href="https://web.facebook.com/muhammad.asrial.7/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/asrial_shoppu/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Asrial Company. All Rights Reserved.</p>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
